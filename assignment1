@@ -1,0 +1,80 @@
+1:-What is Emmet?
+A:-Emmet is a plugin for many popular text editors which greatly improves HTML & CSS.
+
+
+
+2:- Difference between library and framework?
+A:- A library is like going to Ikea. You already have a home, but you need a bit of help with furniture. You don’t feel like making your own table from scratch. Ikea allows you to pick and choose different things to go in your home. You are in control.
+
+A framework, on the other hand, is like building a model home. You have a set of blueprints and a few limited choices when it comes to architecture and design. Ultimately, the contractor and blueprint are in control. And they will let you know when and where you can provide your input.
+
+The technical difference between a framework and library lies in a term called inversion of control.
+
+When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library. When you use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it calls the code you plugged in as needed.
+
+
+
+
+3:- What is CDN? Why do we use it?
+A:- A content delivery network (CDN) is a geographically distributed group of servers that caches content close to end users. A CDN allows for the quick transfer of assets needed for loading Internet content, including HTML pages, JavaScript files, stylesheets, images, and videos.
+
+The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.
+
+
+
+
+
+4:- Why is React Known as React?
+A:- React is aptly named because:
+
+It "reacts" quickly to changes without reloading the whole page.
+It uses the virtual DOM to efficiently update parts of a webpage.
+It’s built around components that "react" and update.
+
+
+
+
+
+5:-What is cross-origin in script tag?
+A:- The crossorigin attribute sets the mode of the request to an HTTP CORS Request. Web pages often make requests to load resources on other servers. Here is where CORS comes in. A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+
+Cross-origin resource sharing (CORS) is an extension of the same-origin policy. You need it for authorized resource sharing with external third parties. For example, you need CORS when you want to pull data from external APIs that are public or authorized.
+
+
+
+
+
+6:- What is difference between React and ReactDOM?
+A:- React: React is a javascript library, designed for building better user interfaces.
+
+React-DOM: React-DOM is a complimentary library to React which glues React to the browser DOM
+
+In a nutshell, Whenever we use component, classes, elements, etc. We’re using React and whenever we use methods like render() or findDOMNode() we’re using React-DOM.
+
+Why did the React team decide to split React and React-DOM into two different libraries?
+
+Because React-DOM binds the idea of React to a web browser. And ideally, React has nothing to do with a browser or web for that matter. That’s why we’re seeing tools and frameworks like React-Native, React-Three being developed. These tools and frameworks don’t use React-DOM, but they do in fact use the idea behind React.
+
+
+
+7:-What is difference between react.development.js and react.production.js files via CDN?
+A:- The React library provides two versions of its JavaScript files: react.development.js and react.production.js. These files serve different purposes and are typically used in different stages of the development and deployment process. When serving these files via a Content Delivery Network (CDN), there are a few key differences between them:
+
+File Size: The react.development.js file is typically larger in size compared to react.production.js. The development version contains additional code, comments, and debugging information that aids in development and troubleshooting. On the other hand, the production version is optimized for performance and has undergone various optimizations, including minification and removal of unnecessary code, resulting in a smaller file size.
+
+Performance: The production version (react.production.js) is optimized for performance and is typically used in production environments. It includes various optimizations, such as dead code elimination, to make the React library run more efficiently. These optimizations help reduce the overall bundle size, improve runtime performance, and enhance the user experience.
+
+Error Messages: The development version (react.development.js) provides more detailed error messages and warnings compared to the production version. This helps developers identify and diagnose issues during the development process. The development version includes additional checks and warnings to provide useful information when something goes wrong. However, these additional checks and messages are not included in the production version for performance reasons.
+
+When using a CDN, it's common to load the development version (react.development.js) during development and debugging stages. This allows developers to take advantage of the detailed error messages and warnings provided by the development version for easier debugging. However, in production environments, it is recommended to use the production version (react.production.js) for better performance and reduced file size.
+
+8:- What is async and defer?
+A:- when browser wcwxuting sscripts it has two works to do, they are 1:-HTML parsing, 2:-Scripts 
+
+case-1: if we use normal script tag without any attributes, parsing will be done until scripts are found. the moment scripts are found, html parsing stops. fetching and executing scripts will happen, and after this again html parsing will start again.
+
+case-2:(using async), when async is used in script tag, html parsing will be done even in fetching of scripts taking place asynchronically, onlt html parsing stops in the time of executing scripts and after execution, html parsing begin again.
+
+case-3:(using defer), when defer is used in script tag, html parsing will not be stopped in the middle, it continues till the end. meanwhile, scripts are fetched in middle parallely, after completion of html parsing then scripts will be executed.
+
+*async attribute does not guarantee the order of execution of the script. but defer follows the order. so use wisely.  if execution of scripts requires a order then defer is preferred, otherwise we can use async also. 
